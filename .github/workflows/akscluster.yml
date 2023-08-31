@@ -18,7 +18,7 @@ jobs:
       #creds: ${{ secrets.AZURE_CREDENTIALS }}
       
     runs-on: ubuntu-latest
-    environment: development
+    environment: production
  
     defaults:
       run:
