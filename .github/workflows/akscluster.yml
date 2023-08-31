@@ -10,10 +10,10 @@ jobs:
   terraform:
     name: 'Terraform'
     env:
-      ARM_CLIENT_ID: "abcf7430-7ef8-4b8b-862a-27a957111fb3"  
+      ARM_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}  
       ARM_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }} 
-      ARM_SUBSCRIPTION_ID: "f486008d-4b99-4803-8c36-15bb22f7eec6"  
-      ARM_TENANT_ID: "72897547-a075-4326-95b9-a3788ed221c7"
+      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}  
+      ARM_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
 
       #creds: # ${{ secrets.AZURE_CREDENTIALS }}
       
