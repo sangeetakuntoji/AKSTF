@@ -1,4 +1,4 @@
-# AKS
+# AKS cluster
 terraform {
   required_providers {
     azurerm = {
@@ -10,7 +10,7 @@ terraform {
 provider "azurerm" {
   features {}
 }
-
+ # backend config
 terraform {
   backend "azurerm" {
     resource_group_name  = "dev-rg"
