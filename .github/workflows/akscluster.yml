@@ -1,4 +1,4 @@
-name: 'Terraform_ACR-Appservice-Infra'
+name: 'Terraform_ACR-Appservice-Infra1'
  
 on:
   push:
