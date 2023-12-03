@@ -16,24 +16,24 @@ terraform {
     resource_group_name  = "dev-rg"
     storage_account_name = "devxyzstorageac01"
     container_name       = "devconatiner"
-    key                  = "devaks1.tfstate"
+    key                  = "devaks2.tfstate"
   }
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "learnk8sResourceGroup1"
+  name     = "learnk8sResourceGroup"
   location = "northeurope"
 }
 
 resource "azurerm_kubernetes_cluster" "cluster" {
-  name                = "learnk8scluster1"
+  name                = "learnk8scluster"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  dns_prefix          = "learnk8scluster1"
+  dns_prefix          = "learnk8scluster"
 
   default_node_pool {
     name       = "default"
-    node_count = "1"
+    node_count = "2"
     vm_size    = "standard_d2_v2"
   }
   identity {
